@@ -1,0 +1,15 @@
+OwnerScreen:
+    name : 'faiz'
+    MDLabel:
+        text: 'TU NOOB HAI ABB OR COMPANY KE BAREH MEH MAT JAN TU OWNER NAHI HAI!'
+        font_size: "6sp"
+        font_style: 'Body2'
+        pos_hint: {'center_x': 0.5,'center_y': 0.8}
+        color: rgba(255, 255, 0, 255)
+    MDIconButton:
+        icon:'keyboard-backspace'
+        pos_hint: {'center_x': 0.1,'center_y': 0.9}
+        color: rgba(255,255,0,255)
+        on_release:
+            root.manager.transition.direction = 'right'
+            root.manager.current = 'about'

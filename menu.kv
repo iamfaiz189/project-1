@@ -1,0 +1,26 @@
+MenuScreen:
+    name : "menu"
+    MDRaisedButton:
+        text : "MENU"
+        md_bg_color: 'yellow'
+        pos_hint: {'center_x': 0.5,'center_y': 0.9}
+    MDIconButton:
+        icon:'keyboard-backspace'
+        pos_hint: {'center_x': 0.1,'center_y': 0.9}
+        color: rgba(255,255,0,255)
+        on_release:
+            root.manager.transition.direction = 'right'
+            root.manager.current = 'main'
+    MDRectangleFlatButton:
+        text: 'Know about company'
+        theme_text_color:"Custom"
+        text_color : "yellow"
+        line_color : "white"
+        pos_hint: {'center_x': 0.5,'center_y': 0.08}
+        on_release:
+            root.manager.transition.direction = 'up'
+            root.manager.current = 'about'
+
+        
+        
+    

@@ -1,0 +1,28 @@
+MainScreen:
+    name: "main"
+    MDLabel:
+        text: "SAVERA STEEL FURNITURE"
+        font_size: "10sp"
+        font_style: 'H4'
+        pos_hint: {'center_x': 0.65,'center_y': 0.8}
+        color: rgba(255, 255, 0, 255)
+        
+    MDTextField:
+        id: password_input
+        hint_text: "Enter Password"
+        helper_text: "Ask Faiz Ahmed"
+        helper_text_mode: "on_focus"
+        icon_right: "android"  
+        icon_right_color: app.theme_cls.primary_color
+        pos_hint: {'center_x': 0.5,'center_y': 0.6}
+        size_hint_x: None
+        width: 290
+        password :True
+        multiline: False   
+
+    MDFillRoundFlatButton:
+        text: "Submit"
+        pos_hint: {'center_x': 0.5,'center_y': 0.4}
+        theme_text_color:"Custom"
+        text_color : "black"
+        on_release: app.root.get_screen('main').verify_credentials(password_input.text)

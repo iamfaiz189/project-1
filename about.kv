@@ -1,0 +1,16 @@
+AboutScreen:
+    name : "about"
+    MDRectangleFlatIconButton:
+        icon: 'android'
+        text: 'About you'
+        pos_hint: {'center_x': 0.5,'center_y': 0.1}  
+        on_release:
+            root.manager.transition.direction = 'left'
+            root.manager.current = 'faiz'
+    MDIconButton:
+        icon:'keyboard-backspace'
+        pos_hint: {'center_x': 0.1,'center_y': 0.9}
+        color: rgba(255,255,0,255)
+        on_release:
+            root.manager.transition.direction = 'right'
+            root.manager.current = 'menu'
